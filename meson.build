@@ -4,7 +4,9 @@ project('FirstPerson', 'cpp',
 
 sdl2_dep = dependency('sdl2')
 
-FirstPerson = executable('FirstPerson', 'main.cpp', install : true,
+sources = files('src/main.cpp', 'src/Player.cpp', 'src/Raycaster.cpp', 'src/Map.cpp')
+
+FirstPerson = executable('FirstPerson', sources, install : true,
 dependencies : sdl2_dep)
 
 
